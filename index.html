@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="game-shell">
+        <div class="panel brand-panel">
+          <p class="eyebrow">Arcade Drop</p>
+          <h1>Tetris</h1>
+          <p class="subtitle">
+            블록을 쌓고 줄을 지우세요. 속도는 점점 빨라집니다.
+          </p>
+          <div class="controls">
+            <p><span>← →</span> 이동</p>
+            <p><span>↓</span> 빠르게 내리기</p>
+            <p><span>↑ / X</span> 회전</p>
+            <p><span>Z</span> 반대 회전</p>
+            <p><span>Space</span> 하드 드롭</p>
+            <p><span>P</span> 일시정지</p>
+          </div>
+        </div>
+
+        <section class="board-wrap">
+          <canvas id="board" width="300" height="600" aria-label="테트리스 게임 화면"></canvas>
+          <div id="overlay" class="overlay">
+            <h2 id="overlay-title">Tetris</h2>
+            <p id="overlay-text">시작 버튼을 눌러 게임을 시작하세요.</p>
+            <button id="start-button" type="button">게임 시작</button>
+          </div>
+        </section>
+
+        <aside class="panel side-panel">
+          <div class="stat-card">
+            <span>점수</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>라인</span>
+            <strong id="lines">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>레벨</span>
+            <strong id="level">1</strong>
+          </div>
+          <div class="next-card">
+            <span>다음 블록</span>
+            <canvas id="next" width="120" height="120" aria-label="다음 블록 미리보기"></canvas>
+          </div>
+          <button id="restart-button" class="ghost-button" type="button">다시 시작</button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
